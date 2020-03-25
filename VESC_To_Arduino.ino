@@ -35,6 +35,8 @@ void setup() {
 
   /** Define which ports to use as UART */
   UART.setSerialPort(&SerialVESC);
+  
+  Serial.println("Start");
 }
 
 void loop() {
