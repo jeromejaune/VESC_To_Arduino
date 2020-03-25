@@ -42,19 +42,19 @@ void loop() {
   /** Call the function getVescValues() to acquire data from VESC */
   if ( UART.getVescValues() ) {
 
-    SerialVESC.print("Vitesse du moteur : ");
-    SerialVESC.println(UART.data.rpm);
-    SerialVESC.print("Voltage : ");
-    SerialVESC.println(UART.data.inpVoltage);
-    SerialVESC.print("Courant : ");
-    SerialVESC.println(UART.data.ampHours);
-    SerialVESC.print("tachometerAbs : ");
-    SerialVESC.println(UART.data.tachometerAbs);
+    Serial.print("Vitesse du moteur : ");
+    Serial.println(UART.data.rpm);
+    Serial.print("Voltage : ");
+    Serial.println(UART.data.inpVoltage);
+    Serial.print("Courant : ");
+    Serial.println(UART.data.ampHours);
+    Serial.print("tachometerAbs : ");
+    Serial.println(UART.data.tachometerAbs);
 
   }
   else
   {
-    SerialVESC.println("Connexion échouée");
+    Serial.println("Connexion échouée");
   }
 
   delay(50);
